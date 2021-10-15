@@ -21,27 +21,27 @@
 extern "C" {
 #endif
 	
-	//
+//
 #define BUTTON GPIO_NUM_0
 #define LED GPIO_NUM_2	
-	//
+//
 #define millis() (esp_timer_get_time() / 1000)
 #define micros() esp_timer_get_time()
 	
 #define digitalWrite(PIN,VAL) gpio_set_level(PIN,VAL)
 #define digitalRead(PIN) gpio_get_level(PIN)
 #define analogRead(pin) 	
-	/*
-	 *
-	 **/
+/*
+*
+**/
 void IRAM_ATTR delayMicroseconds(uint32_t us);
 /*
  *
  **/
 long map(long x, long in_min, long in_max, long out_min, long out_max);
-	/*
-	 *
-	 **/
+/*
+ *
+**/
 #define delay(ms) delayMicroseconds(ms*1000)
 //
 #define bit(b) (1UL << (b))
